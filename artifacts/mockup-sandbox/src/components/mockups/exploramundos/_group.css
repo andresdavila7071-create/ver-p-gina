@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root {
+  --background: 43 52% 95%; --foreground: 218 39% 22%; --border: 42 28% 84%;
+  --card: 42 52% 99%; --card-foreground: 218 39% 22%; --primary: 173 53% 34%;
+  --primary-foreground: 0 0% 100%; --secondary: 35 92% 62%; --secondary-foreground: 218 39% 22%;
+  --muted: 43 34% 90%; --muted-foreground: 218 17% 48%; --accent: 11 74% 63%;
+  --accent-foreground: 0 0% 100%; --destructive: 0 66% 51%; --input: 42 28% 84%; --ring: 173 53% 34%;
+  --app-font-sans: 'DM Sans', sans-serif; --app-font-mono: 'Space Grotesk', monospace; --radius: 1rem;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #f8f4ea; color: #293b36; font-family: var(--app-font-sans); -webkit-font-smoothing: antialiased; }
+button { font: inherit; }

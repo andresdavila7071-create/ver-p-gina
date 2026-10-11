@@ -25,25 +25,25 @@
 
 :root {
   color-scheme: light;
-  --background: 43 52% 95%;
-  --foreground: 218 39% 22%;
-  --border: 42 28% 84%;
-  --card: 42 52% 99%;
-  --card-foreground: 218 39% 22%;
-  --primary: 173 53% 34%;
+  --background: 47 100% 96%;
+  --foreground: 247 38% 22%;
+  --border: 245 30% 86%;
+  --card: 0 0% 100%;
+  --card-foreground: 247 38% 22%;
+  --primary: 252 79% 56%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 35 92% 62%;
-  --secondary-foreground: 218 39% 22%;
-  --muted: 43 34% 90%;
-  --muted-foreground: 218 17% 48%;
-  --accent: 11 74% 63%;
+  --secondary: 48 100% 59%;
+  --secondary-foreground: 247 38% 22%;
+  --muted: 48 72% 91%;
+  --muted-foreground: 247 17% 46%;
+  --accent: 338 87% 62%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 66% 51%;
-  --input: 42 28% 84%;
-  --ring: 173 53% 34%;
+  --input: 245 30% 86%;
+  --ring: 252 79% 56%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-mono: 'Space Grotesk', monospace;
-  --radius: 1rem;
+  --radius: 1.15rem;
 }
 
 * { box-sizing: border-box; }
@@ -52,7 +52,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: hsl(var(--background));
+  background: #fff9e8;
   color: hsl(var(--foreground));
   font-family: var(--app-font-sans);
   -webkit-font-smoothing: antialiased;
@@ -60,7 +60,7 @@ body {
 button, input { font: inherit; }
 button { cursor: pointer; }
 button:focus-visible, input:focus-visible, a:focus-visible {
-  outline: 3px solid #e49a3f;
+  outline: 3px solid #ff9f1c;
   outline-offset: 3px;
 }
 .app-shell { min-height: 100dvh; overflow: hidden; }
@@ -250,3 +250,77 @@ button:focus-visible, input:focus-visible, a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* ExploraMundos: bright paper, punchy arcade ink and chunky tactile controls. */
+body { background: #fff9e8; }
+.app-shell { background: radial-gradient(ellipse at 12% 5%, #fff0a8 0, transparent 25%), #fff9e8; }
+.topbar { width:min(1240px,calc(100% - 40px)); }
+.brand-mark { color:#fff; background:#693fe8; box-shadow:0 4px 0 #4825b1; border-radius:15px; }
+.brand-name { font-family:var(--app-font-mono); color:#302259; font-size:17px; }
+.brand-name span { color:#746c91; }
+.topnav a { color:#514574; }
+.topnav a:hover { color:#e95086; }
+.score-pill { color:#5c3c00; background:#ffe36b; box-shadow:0 3px 0 #e8b93d; }
+.hero { width:min(1240px,calc(100% - 40px)); margin-top:12px; min-height:410px; border-radius:34px; background:#5834d8; box-shadow:0 12px 0 #3e25ad; }
+.hero::after { content:""; position:absolute; inset:0; opacity:.16; pointer-events:none; background-image:radial-gradient(#fff 1.4px,transparent 1.4px); background-size:22px 22px; }
+.hero-copy { padding:56px 20px 46px 62px; }
+.eyebrow { color:#fff1a5; }
+.eyebrow-mark { background:#ffca3a; box-shadow:0 0 0 5px #ffca3a30; }
+.hero h1 { color:#fff; font-family:var(--app-font-mono); font-size:clamp(42px,5.3vw,68px); }
+.hero h1 span { display:block; color:#ffe05c; }
+.hero-copy p { color:#eee8ff; font-size:16px; max-width:475px; }
+.hero-actions { flex-wrap:wrap; }
+.hero-actions > span { color:#f2edff !important; }
+.button-primary { color:#34205f; background:#ffca3a; box-shadow:0 4px 0 #dc9d16; }
+.button-primary:hover { box-shadow:0 6px 0 #dc9d16; }
+.button-secondary { color:#45346f; background:#eee7ff; }
+.hero-art { min-height:385px; }
+.planet { width:min(290px,75%); background:radial-gradient(circle at 34% 28%,#a4f4df,#23c6b7 58%,#128d9e); border-color:#fff3bd; box-shadow:inset -23px -20px 0 #116d7940,0 18px 40px #23105550; }
+.planet::before,.planet::after { background:#c9ff7d; }
+.orbit { border-color:#fef4a880; }
+.satellite { color:#ffcb3d; }
+.planet-dot { background:#ff7ab2; box-shadow:0 4px 0 #d64c82; }
+.spark { color:#ffdb54; }
+.spark-two { color:#ff80ad; }
+.floating-label { color:#3b2a68; background:#fff0a8; }
+.mission-strip,.game-grid,.play-panel,.about { width:min(1240px,calc(100% - 40px)); }
+.section-kicker { color:#e34981; }
+.mission-strip h2,.about h2 { color:#302259; }
+.mission-strip > p { color:#72688f; }
+.game-card { border:2px solid #eee5c8; border-radius:22px; background:#fffdf5; color:#35265c; box-shadow:0 5px 0 #e9dfbe; }
+.game-card:hover { box-shadow:0 9px 0 #e9dfbe; }
+.game-card.is-active { border-color:#7045ed; box-shadow:0 0 0 2px #7045ed inset,0 5px 0 #d9cdfa; }
+.game-number { color:#9c92b3; }
+.game-card:nth-child(1) .game-icon { color:#6740dc;background:#eee7ff; }
+.game-card:nth-child(2) .game-icon { color:#dc4880;background:#ffe4ef; }
+.game-card:nth-child(3) .game-icon { color:#138a82;background:#d9f6e9; }
+.game-card:nth-child(4) .game-icon { color:#dd7e18;background:#fff0ce; }
+.play-panel { border:2px solid #eee5c8; border-radius:28px; background:#fffdf5; box-shadow:0 9px 0 #eee5c8; }
+.panel-head { border-color:#eee6d2; }
+.panel-heading h2,.question-prompt { color:#34245f; }
+.panel-heading p,.question-meta { color:#77708e; }
+.score-tag { color:#67420a; background:#fff0b4; }
+.progress-track { background:#eee8f5; }
+.progress-track span { background:#f05c91; }
+.question-prompt .math-line { color:#e04d82; }
+.answer-option { color:#3b3158; border-color:#e7def4; background:#fff; }
+.answer-option:hover:not(:disabled) { border-color:#8a6aef;background:#f7f2ff; }
+.option-letter { color:#6747c5;background:#eee8ff; }
+.answer-option.correct { border-color:#52b98c;background:#e1f8e9;color:#246644; }
+.answer-option.incorrect { border-color:#ed8a76;background:#fff0e9;color:#964734; }
+.feedback.good { color:#246644;background:#e1f8e9; }
+.feedback.try-again { color:#844326;background:#fff0ce; }
+.energy-layout { color:#34245f; }
+.energy-form > p,.formula-box p { color:#746b8d; }
+.field-row label { color:#50456e; }
+.input-wrap { border-color:#e4dbf0;background:#fff; }
+.input-wrap:focus-within { border-color:#7045ed;box-shadow:0 0 0 3px #7045ed20; }
+.input-wrap input { color:#34245f; }
+.formula-box { border-color:#e4d7ff;background:#f4efff; }
+.formula { color:#5231c0;background:#fff; }
+.energy-result { background:#fffdf5;border-color:#e9ddc3; }
+.result-value { color:#5231c0; }
+.about { border-color:#e6ddc9; }
+.about-lines { color:#6b6380; }
+.footer-note { color:#82799a; }
+@media(max-width:760px) { .hero { width:calc(100% - 30px); } .hero-copy { padding:34px 27px 12px; } }
