@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "El Club de los ExploraMundos"
+description = "Una página web educativa infantil con temática de exploración espacial y juegos interactivos para aprender conceptos escolares de ciencia, naturaleza, arte y tecnología, incluyendo la información de sus autores."
+version = "1.0.0"
+id = "artifacts/exploramundos"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21307
+
+[services.development]
+run = "pnpm --filter @workspace/exploramundos run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/exploramundos", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/exploramundos/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21307"
+BASE_PATH = "/"
