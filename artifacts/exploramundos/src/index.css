@@ -209,7 +209,7 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   .topbar { width: calc(100% - 30px); height: 67px; }
   .topnav { gap: 12px; }
   .topnav a { font-size: 11px; }
-  .topnav a:nth-child(2) { display: none; }
+  .topnav a:nth-child(2), .topnav a:nth-child(3) { display: none; }
   .score-pill { padding: 8px 10px; font-size: 11px; }
   .hero { width: calc(100% - 30px); min-height: 0; grid-template-columns: 1fr; margin-top: 7px; }
   .hero-copy { padding: 34px 27px 12px; }
