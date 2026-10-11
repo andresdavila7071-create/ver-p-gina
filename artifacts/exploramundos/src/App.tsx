@@ -18,6 +18,7 @@ import {
   Zap,
 } from 'lucide-react';
 import SonicArcade from '@/components/sonic-arcade';
+import SubjectLearning from '@/components/subject-learning';
 
 type GameId = 'math' | 'words' | 'eco' | 'energy';
 type ChoiceQuestion = {
@@ -74,7 +75,7 @@ function App() {
     document.documentElement.lang = 'es';
     const description = document.querySelector('meta[name="description"]') ?? document.createElement('meta');
     description.setAttribute('name', 'description');
-    description.setAttribute('content', 'Juegos de matemáticas, lectura, naturaleza y energía para explorar y aprender.');
+    description.setAttribute('content', 'Aprende jugando con 8 materias escolares: matemáticas, lengua, ciencias, sociales, inglés, tecnología, arte y vida saludable.');
     if (!description.parentElement) document.head.appendChild(description);
   }, []);
 
@@ -140,6 +141,7 @@ function App() {
           <span className="brand-name">ExploraMundos<span>Club de exploradores</span></span>
         </a>
         <nav className="topnav" aria-label="Navegación">
+          <a href="#mundos">Materias</a>
           <a href="#misiones">Misiones</a>
           <a href="#sonic">Zona Sonic</a>
           <a href="#informacion">Información</a>
@@ -152,10 +154,10 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow"><span className="eyebrow-mark" /> Tu próxima aventura empieza aquí</div>
             <h1 id="hero-title">El Club de los <span>ExploraMundos</span></h1>
-            <p>Un lugar para probar ideas, resolver misterios y aprender jugando. Elige una misión y deja que la curiosidad te guíe.</p>
+            <p>Explora las materias de la escuela con retos, personajes y juegos para aprender paso a paso. Cada respuesta trae una idea nueva.</p>
             <div className="hero-actions">
-              <a className="button-primary" href="#misiones">Explorar misiones <ArrowDown size={17} /></a>
-              <span style={{ color: '#667a70', fontSize: 12, fontWeight: 600 }}>Cuatro retos. Muchas cosas por descubrir.</span>
+              <a className="button-primary" href="#mundos">Explorar materias <ArrowDown size={17} /></a>
+              <span style={{ color: '#667a70', fontSize: 12, fontWeight: 600 }}>Ocho materias. Decenas de retos para explorar.</span>
             </div>
           </div>
           <div className="hero-art" aria-hidden="true">
@@ -167,6 +169,8 @@ function App() {
             <span className="floating-label">Planeta curiosidad</span>
           </div>
         </section>
+
+        <SubjectLearning />
 
         <SonicArcade />
 
