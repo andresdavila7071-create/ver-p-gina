@@ -17,6 +17,7 @@ import {
   X,
   Zap,
 } from 'lucide-react';
+import SonicArcade from '@/components/sonic-arcade';
 
 type GameId = 'math' | 'words' | 'eco' | 'energy';
 type ChoiceQuestion = {
@@ -140,6 +141,7 @@ function App() {
         </a>
         <nav className="topnav" aria-label="Navegación">
           <a href="#misiones">Misiones</a>
+          <a href="#sonic">Zona Sonic</a>
           <a href="#informacion">Información</a>
           <span className="score-pill" aria-live="polite"><Sparkles size={15} /> {totalScore} {totalScore === 1 ? 'acierto' : 'aciertos'}</span>
         </nav>
@@ -165,6 +167,8 @@ function App() {
             <span className="floating-label">Planeta curiosidad</span>
           </div>
         </section>
+
+        <SonicArcade />
 
         <section id="misiones" aria-labelledby="missions-title">
           <div className="mission-strip">
