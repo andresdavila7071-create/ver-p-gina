@@ -33,7 +33,7 @@ const characters = [
   {
     name: 'Sonic',
     species: 'Erizo azul',
-    initial: 'S',
+    image: '/images/sonic.svg',
     theme: 'sonic-character-blue',
     description: 'Es el héroe de los videojuegos y es famoso por correr a gran velocidad.',
     fact: 'Su color azul y sus zapatillas rojas son parte de su aspecto más conocido.',
@@ -41,7 +41,7 @@ const characters = [
   {
     name: 'Tails',
     species: 'Zorro de dos colas',
-    initial: 'T',
+    image: '/images/tails.svg',
     theme: 'sonic-character-gold',
     description: 'Es amigo de Sonic y usa sus dos colas para volar.',
     fact: 'También es un inventor muy hábil: le encanta construir máquinas.',
@@ -49,7 +49,7 @@ const characters = [
   {
     name: 'Knuckles',
     species: 'Equidna rojo',
-    initial: 'K',
+    image: '/images/knuckles.svg',
     theme: 'sonic-character-red',
     description: 'Es fuerte y protege la Esmeralda Maestra.',
     fact: 'Puede escalar paredes rocosas usando sus nudillos.',
@@ -57,7 +57,7 @@ const characters = [
   {
     name: 'Amy Rose',
     species: 'Eriza rosa',
-    initial: 'A',
+    image: '/images/amy.svg',
     theme: 'sonic-character-pink',
     description: 'Es una aventurera decidida que siempre está lista para ayudar.',
     fact: 'Su martillo se llama Piko Piko Hammer.',
@@ -452,7 +452,7 @@ export function SonicArcade() {
           {characters.map((character) => (
             <article className={`sonic-character-card ${character.theme}`} key={character.name}>
               <div className="sonic-character-top">
-                <span className="sonic-character-avatar" aria-hidden="true">{character.initial}</span>
+                <span className="sonic-character-avatar"><img src={character.image} alt={`Ilustración de ${character.name}`} /></span>
                 <div><h4>{character.name}</h4><span>{character.species}</span></div>
               </div>
               <p>{character.description}</p>
